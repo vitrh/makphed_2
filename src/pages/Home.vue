@@ -16,10 +16,10 @@
 import { onMounted } from "vue";
 import AppLayout from "../layouts/AppLayout.vue";
 import Head from "../components/Head.vue";
-import HeroSection from "../components/Home/HeroSection.vue";
-import AboutSection from "../components/Home/AboutSection.vue";
-import KontaktSection from "../components/Home/KontaktSection.vue";
-import GoogleLocateSection from "../components/Home/GoogleLocateSection.vue";
+import HeroSection from "../components/home/HeroSection.vue";
+import AboutSection from "../components/home/AboutSection.vue";
+import KontaktSection from "../components/home/KontaktSection.vue";
+import GoogleLocateSection from "../components/home/GoogleLocateSection.vue";
 
 onMounted(() => {
   const script = document.createElement("script");

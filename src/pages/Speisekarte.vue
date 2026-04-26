@@ -13,6 +13,6 @@
 <script setup>
 import AppLayout from "../layouts/AppLayout.vue";
 import Head from "../components/Head.vue";
-import SpeisekarteHeroSection from "../components/Speisekarte/HeroSection.vue";
-import MenuSection from "../components/Speisekarte/MenuSection.vue";
+import SpeisekarteHeroSection from "../components/speisekarte/HeroSection.vue";
+import MenuSection from "../components/speisekarte/MenuSection.vue";
 </script>

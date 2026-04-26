@@ -12,5 +12,5 @@
 <script setup>
 import AppLayout from "../layouts/AppLayout.vue";
 import Head from "../components/Head.vue";
-import KontaktForm from "../components/Kontakt/KontaktForm.vue";
+import KontaktForm from "../components/kontakt/KontaktForm.vue";
 </script>
