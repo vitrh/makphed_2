@@ -51,7 +51,3 @@ yarn-error.log
 node_modules
 dist
 .env
-public/img/flyer/flyer1.jpg
-public/img/flyer/flyer2.jpg
-public/img/flyer/Speisekarte.pdf
-public/pdf/Speisekarte.pdf
