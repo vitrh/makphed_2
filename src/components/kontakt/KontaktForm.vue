@@ -1,5 +1,6 @@
 <template>
   <div class="relative bg-stone-900 isolate">
+    <!-- Hinweis Banner -->
     <div
       class="bg-stone-800 border-l-4 border-red-950 px-6 py-4 max-w-7xl mx-auto rounded-r-lg"
     >
@@ -11,6 +12,7 @@
         </p>
       </div>
     </div>
+
     <div class="grid grid-cols-1 mx-auto max-w-7xl lg:grid-cols-2">
       <!-- Left side: contact info -->
       <div
@@ -93,7 +95,7 @@
         </div>
       </div>
 
-      <!-- Right side: form or success message -->
+      <!-- Right side: form or success -->
       <div v-if="!submitted">
         <form
           @submit.prevent="submitForm"
@@ -101,7 +103,6 @@
         >
           <div class="max-w-xl mx-auto lg:mr-0 lg:max-w-lg">
             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-              <!-- Salutation -->
               <div class="sm:col-span-1">
                 <label
                   for="salutation"
@@ -123,7 +124,6 @@
                 </div>
               </div>
 
-              <!-- First name -->
               <div class="sm:col-start-1">
                 <label
                   for="first-name"
@@ -142,7 +142,6 @@
                 </div>
               </div>
 
-              <!-- Last name -->
               <div>
                 <label
                   for="last-name"
@@ -161,7 +160,6 @@
                 </div>
               </div>
 
-              <!-- Email -->
               <div class="sm:col-span-2">
                 <label
                   for="email"
@@ -180,7 +178,6 @@
                 </div>
               </div>
 
-              <!-- Message -->
               <div class="sm:col-span-2">
                 <label
                   for="message"
@@ -198,7 +195,6 @@
                 </div>
               </div>
 
-              <!-- Terms -->
               <div class="sm:col-span-2">
                 <input
                   type="checkbox"
@@ -223,7 +219,6 @@
               </div>
             </div>
 
-            <!-- Submit -->
             <div class="flex justify-end mt-8">
               <button
                 type="submit"
@@ -234,7 +229,6 @@
               </button>
             </div>
 
-            <!-- Error message -->
             <p v-if="error" class="mt-4 text-sm font-semibold text-red-400">
               {{ error }}
             </p>
@@ -242,7 +236,7 @@
         </form>
       </div>
 
-      <!-- Success message -->
+      <!-- Success -->
       <div v-else class="flex items-center justify-center">
         <div class="max-w-xl p-4 my-4 rounded-md sm:mt-0 bg-green-50">
           <div class="flex">
@@ -273,15 +267,15 @@
 <script setup>
 import { ref, reactive } from "vue";
 import { RouterLink } from "vue-router";
-import { CheckCircleIcon } from "@heroicons/vue/20/solid";
 import {
   BuildingOffice2Icon,
   EnvelopeIcon,
   PhoneIcon,
   InformationCircleIcon,
 } from "@heroicons/vue/24/outline";
+import { CheckCircleIcon } from "@heroicons/vue/20/solid";
 
-const FORMSPREE_URL = "https://formspree.io/f/YOUR_FORM_ID";
+const WEB3FORMS_KEY = "e9c8a6be-e61e-4635-9dbf-7b469f77a0a9";
 
 const submitted = ref(false);
 const processing = ref(false);
@@ -306,13 +300,15 @@ async function submitForm() {
   error.value = "";
 
   try {
-    const response = await fetch(FORMSPREE_URL, {
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
       body: JSON.stringify({
+        access_key: WEB3FORMS_KEY,
+        subject: "Neue Kontaktanfrage – Mak Phed",
         salutation: form.salutation,
         first_name: form.first_name,
         last_name: form.last_name,
