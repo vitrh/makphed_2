@@ -1,0 +1,24 @@
+{
+    "name": "Mak Phed - Thailändisches Restaurant Berlin",
+    "short_name": "Mak Phed",
+    "description": "Authentisches thailändisches und laotisches Restaurant in Berlin",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#da532c",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/",
+    "lang": "de",
+    "orientation": "portrait-primary"
+}

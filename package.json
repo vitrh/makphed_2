@@ -1,0 +1,25 @@
+{
+  "name": "makphed",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.23",
+    "@heroicons/vue": "^2.1.5",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "photoswipe": "^5.4.4",
+    "vue": "^3.4.0",
+    "vue-router": "^4.0.0",
+    "vue3-google-map": "^0.22.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^5.0"
+  }
+}
